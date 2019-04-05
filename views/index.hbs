@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Payment</title>
+</head>
+<body>
+
+<section class="py-2">
+    <div class="row">
+        <div class="col-md-6 text-center">
+            <h1 class="display-3 mt-3 pt-5">
+                Ceramics
+            </h1>
+            <h1><p class="lead">Buy Now</p></h1>
+            
+            <form action="/charge" method="POST">
+                <script
+                    src="https://checkout.stripe.com/checkout.js"
+                    class="stripe-button"
+                    data-key='pk_test_9sfrgweK7ZHdxBgno55ucfaV'
+                    data-amounts='30000'
+                    data-name='Your Payment'
+                    data-description='To Buy your items'
+                    data-img="https://stripe.com/img/documentation/checkout/marketplace.png"
+                    data-locate='auto'
+                    data-currency='usd'
+                    >
+                </script>
+                <input type="hidden" name="chargeAmount" value="30000">
+            </form>
+        
+        </div>
+    </div>
+    <div class="col-md-6">
+    </div>
+</section>
+
+</body>
+</html>
